@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Thoughtful pet sitting, dog walks, drop-ins, and overnight care with Nina." />
+  <meta name="theme-color" content="#16372d" />
+  <title>Pet Care by Nina — Happy pets. Peace of mind.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { ink:'#16372d', moss:'#285849', butter:'#f5cb54', cream:'#fffaf0', peach:'#ef987b', blush:'#f8d7cd' },
+      fontFamily: { sans:['DM Sans','sans-serif'], display:['Fraunces','serif'] },
+      boxShadow: { soft:'0 24px 70px rgba(22,55,45,.14)', lift:'0 18px 45px rgba(22,55,45,.2)' }
+    }}}
+  </script>
+  <style>
+    html{background:#fffaf0} body{overflow-x:hidden} ::selection{background:#f5cb54;color:#16372d}
+    .grain{background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.045'/%3E%3C/svg%3E")}
+    .blob{border-radius:46% 54% 63% 37% / 52% 37% 63% 48%}
+    .paw-path{stroke-dasharray:8 15;animation:walk 22s linear infinite}@keyframes walk{to{stroke-dashoffset:-220}}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.in{opacity:1;transform:none}
+    .nav-link:after{content:'';display:block;width:0;height:2px;background:#f5cb54;transition:.25s}.nav-link:hover:after{width:100%}
+    dialog::backdrop{background:rgba(10,30,24,.72);backdrop-filter:blur(6px)}
+  </style>
+</head>
+<body class="font-sans text-ink antialiased">
+  <header class="fixed inset-x-0 top-0 z-50 px-4 pt-4">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-white/50 bg-cream/80 px-5 py-3 shadow-soft backdrop-blur-xl" aria-label="Main navigation">
+      <a href="#home" class="flex items-center gap-3 font-display text-lg font-bold"><span class="grid h-10 w-10 place-items-center rounded-full bg-butter text-xl">🐾</span> Pet Care <span class="hidden sm:inline">by Nina</span></a>
+      <div class="hidden items-center gap-7 text-sm font-semibold md:flex"><a class="nav-link" href="#services">Services</a><a class="nav-link" href="#about">Meet Nina</a><a class="nav-link" href="#reviews">Happy pets</a></div>
+      <button data-open-booking class="group rounded-full bg-ink px-5 py-3 text-sm font-bold text-white shadow-lg transition duration-300 hover:-translate-y-0.5 hover:bg-moss hover:shadow-lift active:scale-95">Check availability <span class="ml-1 inline-block transition-transform group-hover:translate-x-1">↗</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="relative min-h-[850px] overflow-hidden bg-ink pt-28 text-white lg:min-h-screen">
+      <img src="assets/nina-petcare-hero.png" alt="Nina sharing a sunny afternoon with a happy brindle dog" class="absolute inset-0 h-full w-full object-cover object-[68%_center] opacity-70" />
+      <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/5"></div><div class="grain absolute inset-0"></div>
+      <svg class="absolute -bottom-8 left-0 w-full opacity-45" viewBox="0 0 1200 130" fill="none" aria-hidden="true"><path class="paw-path" d="M-20 82C166 22 270 138 446 72s296-28 392 12 211-72 382-30" stroke="#F5CB54" stroke-width="3" stroke-linecap="round"/></svg>
+      <div class="relative mx-auto grid min-h-[720px] max-w-6xl content-center px-6 py-20 lg:grid-cols-[1.05fr_.95fr]">
+        <div class="max-w-2xl">
+          <div class="mb-8 inline-flex -rotate-2 items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold backdrop-blur"><span class="h-2 w-2 animate-pulse rounded-full bg-butter"></span> Now booking new pet families</div>
+          <h1 class="font-display text-[clamp(3.75rem,8vw,7.7rem)] font-bold leading-[.82] tracking-[-.055em]">They stay happy.<br><em class="font-normal text-butter">You stay worry-free.</em></h1>
+          <p class="mt-8 max-w-xl text-lg leading-relaxed text-white/80 sm:text-xl">Thoughtful walks, drop-ins, and overnight care from someone who treats your pets—and your home—like her own.</p>
+          <div class="mt-10 flex flex-wrap items-center gap-4"><button data-open-booking class="group rounded-full bg-butter px-7 py-4 font-bold text-ink shadow-[0_14px_40px_rgba(245,203,84,.28)] transition hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(245,203,84,.38)] active:scale-95">Plan their care <span class="ml-2 transition-transform group-hover:rotate-12">🐾</span></button><a href="#services" class="rounded-full border border-white/30 px-7 py-4 font-semibold backdrop-blur transition hover:border-white hover:bg-white/10 active:scale-95">See services</a></div>
+          <div class="mt-14 flex items-center gap-4 text-sm text-white/75"><div class="flex -space-x-3" aria-hidden="true"><span class="grid h-11 w-11 place-items-center rounded-full border-2 border-ink bg-peach text-xl">🐶</span><span class="grid h-11 w-11 place-items-center rounded-full border-2 border-ink bg-butter text-xl">🐱</span><span class="grid h-11 w-11 place-items-center rounded-full border-2 border-ink bg-blush text-xl">🦜</span></div><span><strong class="block text-base text-white">Care for every personality</strong>Shy, senior, energetic, or delightfully weird.</span></div>
+        </div>
+        <div class="relative hidden lg:block"><div class="absolute bottom-8 right-0 w-72 rotate-3 rounded-[2rem] border border-white/20 bg-white/12 p-5 shadow-soft backdrop-blur-xl transition duration-500 hover:rotate-0 hover:-translate-y-2"><div class="flex items-start justify-between"><span class="text-3xl">☀️</span><span class="rounded-full bg-white/15 px-3 py-1 text-xs font-bold">TODAY</span></div><p class="mt-8 font-display text-2xl">Murphy's walk</p><p class="mt-1 text-white/65">3:30 PM · Lakeside loop</p><div class="mt-5 h-2 overflow-hidden rounded-full bg-white/15"><div class="h-full w-4/5 rounded-full bg-butter"></div></div><p class="mt-2 text-xs text-white/60">One happy pup incoming</p></div></div>
+      </div>
+    </section>
+
+    <section id="services" class="relative bg-cream py-24 sm:py-32">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="reveal grid items-end gap-6 md:grid-cols-2"><div><p class="mb-4 text-sm font-bold uppercase tracking-[.25em] text-moss">Care made personal</p><h2 class="font-display text-5xl font-bold leading-none tracking-tight sm:text-6xl">The right rhythm<br>for their routine.</h2></div><p class="max-w-lg text-lg leading-relaxed text-moss/80">No cookie-cutter visits. Every booking starts with your pet’s habits, quirks, medications, favorite hiding spots, and preferred level of belly rubs.</p></div>
+        <div class="mt-16 grid gap-6 lg:grid-cols-12">
+          <article class="reveal group relative overflow-hidden rounded-[2.5rem] bg-butter p-8 shadow-soft transition duration-500 hover:-translate-y-2 hover:shadow-lift lg:col-span-7"><span class="absolute -right-6 -top-10 text-[10rem] opacity-15 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110">🐕</span><p class="text-sm font-bold uppercase tracking-widest">Fresh air, their pace</p><h3 class="mt-16 font-display text-4xl font-bold">Dog walks</h3><p class="mt-3 max-w-md text-ink/75">Neighborhood sniffari, brisk exercise, or a gentle senior stroll—plus water refresh and a photo update.</p><p class="mt-8 font-bold">30 or 60 minutes</p></article>
+          <article class="reveal group rounded-[2.5rem_2.5rem_2.5rem_.75rem] bg-peach p-8 shadow-soft transition duration-500 hover:-translate-y-2 hover:rotate-1 hover:shadow-lift lg:col-span-5"><span class="text-5xl">🏡</span><h3 class="mt-14 font-display text-4xl font-bold">Drop-in visits</h3><p class="mt-3 text-ink/75">Meals, medication, litter or yard care, playtime, and a little company while you’re away.</p><p class="mt-8 font-bold">30 or 45 minutes</p></article>
+          <article class="reveal group rounded-[.75rem_2.5rem_2.5rem_2.5rem] bg-moss p-8 text-white shadow-soft transition duration-500 hover:-translate-y-2 hover:-rotate-1 hover:shadow-lift lg:col-span-5"><span class="text-5xl">🌙</span><h3 class="mt-14 font-display text-4xl font-bold">Overnight care</h3><p class="mt-3 text-white/70">Familiar beds, familiar sounds, and a trusted human at home. Morning and evening routines included.</p><p class="mt-8 font-bold text-butter">Cozy care, all night</p></article>
+          <article class="reveal group relative overflow-hidden rounded-[2.5rem] bg-blush p-8 shadow-soft transition duration-500 hover:-translate-y-2 hover:shadow-lift lg:col-span-7"><span class="absolute -bottom-10 right-4 text-[10rem] opacity-15 transition-transform duration-500 group-hover:-rotate-12">🐾</span><p class="text-sm font-bold uppercase tracking-widest">Your trip, covered</p><h3 class="mt-16 font-display text-4xl font-bold">Vacation care</h3><p class="mt-3 max-w-md text-ink/75">A custom blend of visits or overnights, with mail collection, plant watering, and daily check-ins for you.</p><p class="mt-8 font-bold">Built around your dates</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="relative overflow-hidden bg-white py-24 sm:py-32"><div class="absolute -left-24 top-16 h-72 w-72 rounded-full bg-butter/35 blur-3xl"></div><div class="mx-auto grid max-w-6xl gap-14 px-6 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
+      <div class="reveal relative mx-auto max-w-md"><div class="blob aspect-square bg-[url('assets/nina-petcare-hero.png')] bg-cover bg-[70%_center] shadow-lift"></div><div class="absolute -bottom-5 -right-4 rotate-3 rounded-2xl bg-ink px-5 py-4 text-white shadow-xl"><span class="block font-display text-2xl font-bold text-butter">Hi, I’m Nina.</span><span class="text-sm text-white/70">Professional treat-giver</span></div></div>
+      <div class="reveal"><p class="mb-4 text-sm font-bold uppercase tracking-[.25em] text-moss">Your pet’s new favorite person</p><h2 class="font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl">Care that feels like a friend came over.</h2><p class="mt-7 text-lg leading-relaxed text-moss/80">Pets are happiest when they can be themselves. I follow their routine, respect their boundaries, and keep you in the loop with honest updates and plenty of photos. Whether your dog needs miles or your cat needs quiet company, I meet them where they are.</p><div class="mt-9 grid grid-cols-2 gap-4"><div class="rounded-2xl border border-ink/10 p-5"><span class="text-2xl">📸</span><p class="mt-3 font-bold">Photo updates</p><p class="mt-1 text-sm text-moss/70">Never wonder how they’re doing.</p></div><div class="rounded-2xl border border-ink/10 p-5"><span class="text-2xl">🗝️</span><p class="mt-3 font-bold">Respectful care</p><p class="mt-1 text-sm text-moss/70">Your home is cared for, too.</p></div></div></div>
+    </div></section>
+
+    <section id="reviews" class="bg-ink py-24 text-white sm:py-32"><div class="mx-auto max-w-6xl px-6"><div class="reveal flex flex-col justify-between gap-6 sm:flex-row sm:items-end"><div><p class="mb-4 text-sm font-bold uppercase tracking-[.25em] text-butter">Notes from the pack</p><h2 class="font-display text-5xl font-bold sm:text-6xl">More happy pets.</h2></div><div class="flex gap-2" aria-hidden="true"><span class="text-2xl">★★★★★</span></div></div><div class="mt-14 grid gap-6 md:grid-cols-[1.2fr_.8fr]">
+      <blockquote class="reveal rounded-[2.5rem] bg-white p-8 text-ink sm:p-10"><p class="font-display text-3xl font-semibold leading-snug sm:text-4xl">“Nina is the first sitter Murphy runs toward at the door. The photos make my day, and I come home to a calm dog every time.”</p><footer class="mt-8 flex items-center gap-4"><span class="grid h-12 w-12 place-items-center rounded-full bg-butter text-2xl">🐕</span><div><strong class="block">Murphy’s human</strong><span class="text-sm text-moss/60">Walks & vacation care</span></div></footer></blockquote>
+      <blockquote class="reveal flex flex-col justify-between rounded-[2.5rem_2.5rem_.75rem_2.5rem] bg-butter p-8 text-ink"><p class="font-display text-2xl font-semibold leading-snug">“She understood Theo’s shy little heart right away. By day two, he was asking her for couch cuddles.”</p><footer class="mt-8"><strong>Theo’s family</strong><span class="block text-sm text-ink/60">Drop-in visits</span></footer></blockquote>
+    </div></div></section>
+
+    <section class="bg-cream py-20"><div class="reveal mx-auto max-w-5xl px-6"><div class="relative overflow-hidden rounded-[3rem] bg-butter px-7 py-14 text-center shadow-soft sm:px-14"><span class="absolute -left-4 top-1/2 -translate-y-1/2 text-8xl opacity-15">🐾</span><span class="absolute -right-5 top-4 rotate-12 text-8xl opacity-15">🦴</span><p class="text-sm font-bold uppercase tracking-[.22em]">Let’s make a plan</p><h2 class="mx-auto mt-4 max-w-3xl font-display text-4xl font-bold leading-tight sm:text-6xl">Going somewhere? They can stay right where they’re loved.</h2><button data-open-booking class="mt-8 rounded-full bg-ink px-8 py-4 font-bold text-white shadow-xl transition hover:-translate-y-1 hover:bg-moss hover:shadow-lift active:scale-95">Tell Nina about your pet</button></div></div></section>
+  </main>
+
+  <footer class="bg-cream pb-10"><div class="mx-auto flex max-w-6xl flex-col gap-6 border-t border-ink/10 px-6 pt-8 sm:flex-row sm:items-center sm:justify-between"><div><strong class="font-display text-xl">Pet Care by Nina</strong><p class="mt-1 text-sm text-moss/65">Happy pets. Peace of mind.</p></div><div class="flex items-center gap-5 text-sm font-semibold"><a class="transition hover:text-peach" href="https://www.instagram.com/petcarebyneens/" target="_blank" rel="noreferrer">Instagram</a><button data-open-booking class="transition hover:text-peach">Book care</button><span class="text-moss/50">© <span id="year"></span></span></div></div></footer>
+
+  <dialog id="booking" class="w-[calc(100%-2rem)] max-w-xl rounded-[2rem] bg-cream p-0 text-ink shadow-2xl"><div class="relative p-7 sm:p-10"><button data-close-booking class="absolute right-5 top-5 grid h-10 w-10 place-items-center rounded-full bg-ink/5 text-xl transition hover:rotate-90 hover:bg-ink hover:text-white" aria-label="Close booking form">×</button><p class="text-sm font-bold uppercase tracking-[.2em] text-moss">Care request</p><h2 class="mt-2 pr-10 font-display text-4xl font-bold">Tell me about your pet.</h2><p class="mt-3 text-moss/70">Share the basics, then send your note straight to Nina on Instagram.</p><form id="bookingForm" class="mt-7 space-y-4"><label class="block"><span class="mb-2 block text-sm font-bold">Your name</span><input required name="name" class="w-full rounded-2xl border border-ink/15 bg-white px-4 py-3 outline-none transition focus:border-moss focus:ring-4 focus:ring-moss/10" /></label><label class="block"><span class="mb-2 block text-sm font-bold">Pet name & type</span><input required name="pet" placeholder="Murphy, dog" class="w-full rounded-2xl border border-ink/15 bg-white px-4 py-3 outline-none transition placeholder:text-ink/30 focus:border-moss focus:ring-4 focus:ring-moss/10" /></label><label class="block"><span class="mb-2 block text-sm font-bold">What care do you need?</span><select name="service" class="w-full rounded-2xl border border-ink/15 bg-white px-4 py-3 outline-none transition focus:border-moss focus:ring-4 focus:ring-moss/10"><option>Dog walks</option><option>Drop-in visits</option><option>Overnight care</option><option>Vacation care</option></select></label><label class="block"><span class="mb-2 block text-sm font-bold">Dates or details</span><textarea required name="details" rows="3" placeholder="A few dates and anything Nina should know…" class="w-full resize-none rounded-2xl border border-ink/15 bg-white px-4 py-3 outline-none transition placeholder:text-ink/30 focus:border-moss focus:ring-4 focus:ring-moss/10"></textarea></label><button class="w-full rounded-full bg-ink px-6 py-4 font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-moss active:scale-[.98]">Prepare Instagram message</button><p id="formNote" class="hidden rounded-xl bg-butter/35 px-4 py-3 text-center text-sm font-semibold"></p></form></div></dialog>
+
+  <script>
+    const dialog=document.querySelector('#booking');
+    document.querySelectorAll('[data-open-booking]').forEach(b=>b.addEventListener('click',()=>dialog.showModal()));
+    document.querySelectorAll('[data-close-booking]').forEach(b=>b.addEventListener('click',()=>dialog.close()));
+    dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
+    document.querySelector('#bookingForm').addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.currentTarget);const message=`Hi Nina! I'm ${d.get('name')}. I'm looking for ${d.get('service').toLowerCase()} for ${d.get('pet')}. ${d.get('details')}`;navigator.clipboard?.writeText(message);const note=document.querySelector('#formNote');note.textContent='Message copied! Opening Instagram so you can send it to Nina.';note.classList.remove('hidden');setTimeout(()=>window.open('https://www.instagram.com/petcarebyneens/','_blank','noopener'),700)});
+    const observer=new IntersectionObserver(entries=>entries.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+    document.querySelector('#year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
